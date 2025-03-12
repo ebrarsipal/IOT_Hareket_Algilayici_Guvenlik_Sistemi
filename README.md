@@ -6,3 +6,6 @@ bir hareket algılama sensörü (PIR sensörü) kullanacak ve bu hareket algıla
 kullanıcılara Telegram üzerinden anlık bildirim gönderecektir. Raspberry Pi Pico W, sistemin
 ana kontrol birimi olarak kullanılacaktır.
 
+Kullanılacak Komponenetler
+ Raspberry Pi Pico W
+ PIR sensörü
