@@ -12,7 +12,7 @@ ana kontrol birimi olarak kullanılacaktır.
 - PIR sensörü
 - İletken Teller
   
-  ## Projeyi Çalıştırma
+## Projeyi Çalıştırma
 Bu proje, Raspberry Pi Pico W mikrodenetleyicisi kullanılarak geliştirilen, hareket algılama tabanlı bir güvenlik sistemi sunar. Sistem, PIR (Passive Infrared) sensörü aracılığıyla çevredeki hareketleri algılar ve bu veriyi dijital sinyal olarak Raspberry Pi Pico W'ye iletir. Raspberry Pi Pico W, Wi-Fi modülü sayesinde bu sinyali işleyip bir Telegram botu aracılığıyla kullanıcılara anlık bildirim gönderir.
   
   Sistem akışı şu şekildedir:
@@ -21,10 +21,10 @@ Bu proje, Raspberry Pi Pico W mikrodenetleyicisi kullanılarak geliştirilen, ha
 - Bildirim Gönderimi: Tespit edilen hareket bilgisi, Telegram Bot API kullanılarak kullanıcılara anlık mesaj olarak iletilir.
 - Hata Kontrolü: Yanlış alarmları önlemek için belirli bir süre içinde sürekli hareket kontrolü yapılır.
 
-  ## Proje Lisans Bilgileri
+## Proje Lisans Bilgileri
 Apache 2.0
   
-  ## Proje Anahtar Kelimeleri
+ ## Proje Anahtar Kelimeleri
 - IoT (Nesnelerin İnterneti)
 - Hareket Algılama
 - Güvenlik Sistemi
