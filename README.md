@@ -9,4 +9,5 @@ ana kontrol birimi olarak kullanılacaktır.
 Kullanılacak Komponenetler
 
  Raspberry Pi Pico W
+ 
  PIR sensörü
