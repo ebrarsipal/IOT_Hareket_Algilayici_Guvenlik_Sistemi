@@ -1,8 +1,10 @@
 # Proje Konusu
 
-Bu proje, Raspberry Pi Pico W mikrodenetleyicisi ve PIR (Passive Infrared) sensörü kullanarak bir hareket algılama sistemi geliştirmeyi amaçlamaktadır. Sistemde, PIR sensör hareket algıladığında, Raspberry Pi Pico W Telegram botu üzerinden bir mesaj gönderecektir. Bu mesaj, kullanıcının Telegram hesabına iletilecek olup, hareketin tespit edildiğini bildirecektir. Bu tür bir sistem, güvenlik uygulamaları, akıllı ev projeleri veya çevre izleme projelerinde kullanılabilir.
+Bu proje, evlerdeki güvenliği artırmak amacıyla bir hareket algılama güvenlik sistemi tasarlamayı hedeflemektedir. Sistem, evdeki olası hırsızlık durumlarını tespit edebilmek için bir hareket algılama sensörü (PIR sensörü) kullanacak ve bu hareket algılandığında kullanıcılara Telegram üzerinden anlık bildirim gönderecektir. Raspberry Pi Pico W, sistemin ana kontrol birimi olarak kullanılacaktır.
 
 # Proje Hedefleri
+
+Projenin temel amacı, kullanıcıları evlerinde veya işyeri ortamlarında hareket algılandığında anında bilgilendirerek güvenlik seviyesini artırmaktır.
 
 ## Proje Amaçları:
 
@@ -20,10 +22,18 @@ Bu proje, Raspberry Pi Pico W mikrodenetleyicisi ve PIR (Passive Infrared) sens�
 
 Hafta | 1 | 2 - 3 | 4 - 5 | 6 - 9 | 10 - 11 | 12 | 13 | 14 
 --- | --- | --- |--- |--- |--- |--- |--- |---
-Gorev | Proje başlangıcı, görev dağılımı, proje planlaması | Donanım seçimi, Raspberry Pi Pico W ve PIR sensörü kurulumu ve test edilmesi | Telegram botu oluşturulması ve API entegrasyonu | Yazılım geliştirme, Raspberry Pi Pico W ile Telegram botunun entegrasyonu | Sistemin test edilmesi, yazılım hatalarının giderilmesi | Test ve final kontrolü | Belgelerin hazırlanması, raporlama | Son inceleme, teslimat ve kapanış 
+Gorev | Araştırma ve Planlama | Raspberry Pi Pico W ve PIR sensörü kurulumu ve test edilmesi | PIR sensör entegrasyonu | Telegram Botu geliştirme | Sistemin testleri ve hata ayıklama | Test ve final kontrolü | Raporlama ve doküman hazırlama | Son testler ve proje teslimi
 
 # Kaynak Planlaması
 
+Proje ekibi 4 kişiden oluşmaktadır:
+•	Serdar Ayvalı: Raspberry Pi Pico W kurulumu ve Telegram botu entegrasyonu
+•	Ramazan Aslan: Raspberry Pi Pico W kurulumu ve Telegram botu entegrasyonu
+•	Ezgi Aydın: Raporlama, doküman hazırlama ve test senaryolarını gerçekleştirme
+•	Ebrar Begüm Şipal: Raporlama, doküman hazırlama ve test senaryolarını gerçekleştirme
+
+
+## Kaynak Planlaması
 Ekipmanlar:
   - 1 x Raspberry Pi Pico W
   - 1 x PIR sensörü
@@ -48,10 +58,13 @@ Toplam Maliyet (Yaklaşık): 300 TL
 
 Potansiyel Sorunlar ve Çözüm Önerileri:
 
-  - PIR sensörünün hassasiyeti: PIR sensörleri bazen yanlış algılamalar yapabilir. Bu sorunun önüne geçmek için, sensör yerleşimini dikkatli yapmak ve yazılımda doğrulama algoritmaları kullanmak önerilir.
-  - Telegram botunun çalışmaması: Telegram API bağlantısı zaman zaman kesilebilir. Bu durumda botun yeniden başlatılması ve hataların loglanması gerekecektir.
-  - Donanım arızası: Raspberry Pi Pico W veya sensörde arıza yaşanabilir. Yedek donanım bulundurmak ve testler sırasında dikkatli olmak gerekir.
-  - Kullanıcı dostu olmama: Kullanıcı geri bildirimlerine dayalı olarak Telegram botunun kullanımını daha kullanıcı dostu hale getirmek gerekecektir. Ayrıca, sistemde zaman zaman güncellemeler yapılmalıdır.
+ - Yanlış Alarm Oranı Yüksekliği: PIR sensörlerinin yanlış tetiklenmesi, gereksiz bildirimlere yol açabilir. Bu sorunun önüne geçmek için sensörlerin hassasiyet ayarlarının doğru yapılandırılması ve çevresel etkenlerin (örneğin evcil hayvan hareketleri) göz önünde bulundurulması gerekmektedir.
+   
+- Telegram Bildirimlerinde Gecikme: Sistem, kullanıcılara anında bildirim göndermeyi amaçlamaktadır. Ancak ağ trafiği, Telegram API’sindeki yoğunluk veya internet bağlantısındaki kesintiler nedeniyle bildirimlerde gecikme yaşanabilir. Bu riski azaltmak için sistemde yerel bir uyarı mekanizması veya alternatif bildirim yöntemleri (SMS veya e-posta) eklenebilir.
+Raspberry Pi Pico W'nin Yetersiz Kalması: Sistemin işlem kapasitesinin yetersiz olması, veri işleme ve bildirimlerin gecikmesine neden olabilir. Bunu önlemek için Raspberry Pi’nin işlem yükü düzenlenmeli ve gerektiğinde daha güçlü donanım seçenekleri değerlendirilmelidir.
+
+- Wi-Fi Kesintileri: Sistem tamamen internet bağlantısına dayandığı için Wi-Fi kesintileri, bildirimlerin ulaşmamasına neden olabilir. Bunu önlemek amacıyla alternatif bağlantı yöntemleri (örneğin GSM modülü ile yedekleme) değerlendirilebilir veya sistem, bağlantı geri geldiğinde bildirimleri tekrar gönderecek şekilde tasarlanmalıdır.
+
 
 # Ticari Potansiyel
 
