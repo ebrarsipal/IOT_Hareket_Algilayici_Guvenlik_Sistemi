@@ -7,5 +7,6 @@ kullanıcılara Telegram üzerinden anlık bildirim gönderecektir. Raspberry Pi
 ana kontrol birimi olarak kullanılacaktır.
 
 Kullanılacak Komponenetler
+
  Raspberry Pi Pico W
  PIR sensörü
