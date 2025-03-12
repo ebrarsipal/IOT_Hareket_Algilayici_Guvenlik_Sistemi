@@ -22,7 +22,7 @@ Bu proje, Raspberry Pi Pico W mikrodenetleyicisi kullanılarak geliştirilen, ha
 - Hata Kontrolü: Yanlış alarmları önlemek için belirli bir süre içinde sürekli hareket kontrolü yapılır.
 
   ## Proje Lisans Bilgileri
-
+Apache 2.0
   
   ## Proje Anahtar Kelimeleri
 - IoT (Nesnelerin İnterneti)
