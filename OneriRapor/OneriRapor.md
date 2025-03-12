@@ -20,9 +20,10 @@ Projenin temel amacı, kullanıcıları evlerinde veya işyeri ortamlarında har
 
 # Tahmini Zaman Çizelgesi
 
-Hafta | 1 | 2 - 3 | 4 - 5 | 6 - 7 | 8 - 9 | 10 | 11 - 12 
---- | --- | --- |--- |--- |--- |--- |--- |---
-Gorev | Araştırma ve Planlama | Raspberry Pi Pico W ve PIR sensörü kurulumu ve test edilmesi | PIR sensör entegrasyonu | Telegram Botu geliştirme | Sistemin testleri ve hata ayıklama | Test ve final kontrolü | Raporlama ve doküman hazırlama | Son testler ve proje teslimi
+| **Hafta**    | 1              | 2 - 3                                | 4 - 5                 | 6 - 7                 | 8 - 9                       | 10                  | 11 - 12                   |
+|--------------|----------------|--------------------------------------|-----------------------|-----------------------|-----------------------------|--------------------|----------------------------|
+| **Görev**    | Araştırma ve Planlama | Raspberry Pi Pico W ve PIR sensörü kurulumu ve test edilmesi | PIR sensör entegrasyonu | Telegram Botu geliştirme | Sistemin testleri ve hata ayıklama | Test ve final kontrolü | Raporlama ve doküman hazırlama, son testler ve proje teslimi |
+
 
 # Kaynak Planlaması
 
