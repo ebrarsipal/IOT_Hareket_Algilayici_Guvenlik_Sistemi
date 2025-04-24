@@ -28,10 +28,10 @@ Proje, Raspberry Pi Pico W ve üç adet PIR hareket sensörü kullanılarak geli
 | NTP üzerinden zaman senkronizasyonu | Mesajlara zaman damgası eklemek için                                      |
 
 ### Metodoloji
- Her sensör, yapılandırılmış bir pir\_sensor dizisinde tanımlanır.
- loop() içinde sürekli izlenir, HIGH sinyali alınan sensör için bir defaya mahsus mesaj gönderilir (sent\_message kontrolü).
- Hareket yoksa sent\_message sıfırlanır ve tekrar tetiklenebilir hale gelir.
-Kodda pin.value() ile sensör okuması yapılır, send\_message() fonksiyonu ile Telegram’a bildirim gönderilir.
+ Her sensör, yapılandırılmış bir **`pir_sensor()`** dizisinde tanımlanır.
+ **`loop()`** içinde sürekli izlenir, HIGH sinyali alınan sensör için bir defaya mahsus mesaj gönderilir (**`sent_message()`** kontrolü).
+ Hareket yoksa **`sent_message()`** sıfırlanır ve tekrar tetiklenebilir hale gelir.
+Kodda **`pin.value()`** ile sensör okuması yapılır, **`send_message()`** fonksiyonu ile Telegram’a bildirim gönderilir.
 
 
 # Yapılan Teknik Çalışmalar
