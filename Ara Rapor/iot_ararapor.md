@@ -34,13 +34,36 @@ Proje, Raspberry Pi Pico W ve üç adet PIR hareket sensörü kullanılarak geli
 Kodda pin.value() ile sensör okuması yapılır, send\_message() fonksiyonu ile Telegram’a bildirim gönderilir.
 
 
-# Yapılan Çalışmalar ve Görselleri
+# Yapılan Teknik Çalışmalar
 
-Raspberry Pi Pico W’ye 3 farklı PIR sensörü bağlandı.
-Her sensör için ayrı GPIO pinleri kullanılarak odaların bağımsız takibi sağlandı.
-C++ ile hareket kontrol ve Telegram mesaj gönderme kodları yazıldı.
-Telegram botu oluşturularak entegre edildi.
-Testler sonucunda her sensör için ayrı bildirimler başarıyla gönderildi.
+Bu projede Raspberry Pi Pico W kullanılarak üç adet PIR sensörle donatılmış çok odalı bir güvenlik sistemi oluşturulmuştur. Her sensör farklı bir fiziksel alanı temsil etmektedir: Mutfak, Garaj ve Koridor. Aşağıda sistemin kurulum ve çalışma yapısı, kullanılan temel fonksiyonlar bağlamında teknik olarak özetlenmiştir:
+
+## Fonksiyonel Yapı
+
+- **`setup()`**
+  - Donanım başlatma: PIR sensör GPIO pinleri giriş olarak ayarlanır.
+  - Wi-Fi yapılandırması yapılır ve Telegram bot ile güvenli bağlantı kurulur.
+  - `configTime()` ile zaman senkronizasyonu sağlanır.
+  - Sistem başlatıldığında LED gösterge ile kullanıcı bilgilendirilir ve Telegram üzerinden başlangıç mesajı gönderilir.
+
+- **`loop()`**
+  - `Kill Switch` kontrol edilir; sistem çalışmasını kullanıcı fiziksel olarak kontrol edebilir.
+  - Tüm PIR sensörler sürekli taranır.
+  - Hareket algılandığında sensör durumuna göre yalnızca bir defa bildirim yapılır.
+  - `digitalRead()` ile sensör durumu okunur, `digitalWrite()` ile LED yanıt verir.
+  - Algılanan hareket bilgisi `sendMessage()` aracılığıyla Telegram üzerinden zaman damgalı olarak kullanıcıya gönderilir.
+
+- **`sendMessage()` (UniversalTelegramBot)**
+  - Telegram Bot API ile güvenli şekilde mesaj iletimini gerçekleştirir.
+
+- **`configTime()` (ESP zaman senkronizasyon fonksiyonu)**
+  - İnternet üzerinden zaman bilgisini alarak olaylara zaman damgası eklenmesini sağlar.
+
+- **`digitalRead()` / `digitalWrite()`**
+  - GPIO pinlerinden veri okuma ve LED çıkış kontrolü işlemleri için kullanılır.
+
+Bu yapı sayesinde sistem; hareketleri doğru şekilde algılar, oda bazlı bildirim üretir, kullanıcıyı zamanlı olarak bilgilendirir ve manuel olarak kontrol edilebilir modda çalışır.
+
 
 # Elde Edilen Teknik Sonuçlar
 
