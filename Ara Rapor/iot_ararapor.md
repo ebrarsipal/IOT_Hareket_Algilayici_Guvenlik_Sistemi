@@ -27,7 +27,7 @@ Proje, Raspberry Pi Pico W ve üç adet PIR hareket sensörü kullanılarak geli
 | WiFiClientSecure / X509 sertifika   | HTTPS üzerinden Telegram sunucusuyla güvenli bağlantı                     |
 | NTP üzerinden zaman senkronizasyonu | Mesajlara zaman damgası eklemek için                                      |
 
-Metodoloji:
+### Metodoloji
  Her sensör, yapılandırılmış bir pir\_sensor dizisinde tanımlanır.
  loop() içinde sürekli izlenir, HIGH sinyali alınan sensör için bir defaya mahsus mesaj gönderilir (sent\_message kontrolü).
  Hareket yoksa sent\_message sıfırlanır ve tekrar tetiklenebilir hale gelir.
