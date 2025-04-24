@@ -1,10 +1,13 @@
-1. Proje Konusu 
+# Proje Konusu
+
 Bu proje, evdeki üç farklı odanın güvenliğini sağlamak amacıyla, her birine yerleştirilen hareket sensörleriyle çalışan akıllı bir güvenlik sistemi geliştirmeyi amaçlamaktadır. Sistem, hareket algılandığında kullanıcıya anında Telegram üzerinden bildirim gönderir. Geliştirilen ürün sonucunda kişi evde yokken evde hangi odada hareket tespit edildiği bilgisine sahip olur.
 
-2. Özet 
+# Özet
+
 Proje, Raspberry Pi Pico W ve üç adet PIR hareket sensörü kullanılarak geliştirilmiş bir IoT tabanlı güvenlik sistemidir. Her sensör farklı bir odayı temsil eder ve bu odalarda hareket algılandığında, sistem ilgili oda bilgisini de içeren bir uyarıyı Telegram botu aracılığıyla kullanıcıya iletir.
 
-3. Kullanılan Yöntemler
+# Kullanılan Yöntemler
+
 ### Donanım
 
 | Bileşen                  | Açıklama                                                                 |
@@ -30,14 +33,17 @@ Metodoloji:
  Hareket yoksa sent\_message sıfırlanır ve tekrar tetiklenebilir hale gelir.
 Kodda pin.value() ile sensör okuması yapılır, send\_message() fonksiyonu ile Telegram’a bildirim gönderilir.
 
-4. Yapılan Çalışmalar ve Görselleri
+
+# Yapılan Çalışmalar ve Görselleri
+
 Raspberry Pi Pico W’ye 3 farklı PIR sensörü bağlandı.
 Her sensör için ayrı GPIO pinleri kullanılarak odaların bağımsız takibi sağlandı.
 C++ ile hareket kontrol ve Telegram mesaj gönderme kodları yazıldı.
 Telegram botu oluşturularak entegre edildi.
 Testler sonucunda her sensör için ayrı bildirimler başarıyla gönderildi.
 
-5. Elde Edilen Teknik Sonuçlar
+# Elde Edilen Teknik Sonuçlar
+
 Üç adet PIR (Passive Infrared) sensör, bağımsız GPIO pinleri (GPIO 18, 19, 20) üzerinden yapılandırılarak ayrı ayrı başarıyla konumlandırıldı.
 Sensörlerden herhangi biri tarafından algılanan hareket, önceden yapılandırılmış struct dizisi aracılığıyla algılandığı odanın ismi ile ilişkilendirildi.
 Telegram API aracılığıyla, olayın gerçekleştiği odaya özgü zaman damgalı mesaj, TLS sertifikalı HTTPS üzerinden başarılı şekilde iletildi.
